@@ -19,8 +19,8 @@ def git_push(repo_path, commit_msg):
 
 def main():
     parser = argparse.ArgumentParser(description="定时多次上传当前文件夹到GitHub")
-    parser.add_argument('--count', type=int, default=1, help='上传次数')
-    parser.add_argument('--interval', type=int, default=60, help='每次上传间隔（秒）')
+    parser.add_argument('--count', type=int, default=10, help='上传次数')
+    parser.add_argument('--interval', type=int, default=10, help='每次上传间隔（秒）')
     args = parser.parse_args()
 
     repo_path = os.path.dirname(os.path.abspath(__file__))
