@@ -55,7 +55,7 @@ def main():
     parser.add_argument('--interval', type=int, default=2, help='每次上传间隔（秒）')
     args = parser.parse_args()
 
-    random_increment = random.randint(1, 30)
+    random_increment = random.randint(1, 10)
     args.count += random_increment
     print(f"实际上传次数为：{args.count}次（原次数+随机增量 {random_increment}）")
     logging.info(f"随机增量生效 | 原次数：{args.count - random_increment} | 新增次数：{random_increment} | 总次数：{args.count}")
